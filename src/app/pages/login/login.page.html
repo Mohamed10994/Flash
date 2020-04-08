@@ -1,0 +1,39 @@
+<ion-header no-border>
+  <!--<ion-toolbar color="mango" textalign="center">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>-->
+  <div class="login-header ion-padding">
+    <img class="logo-img" src="assets/images/flash2.png">
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="center">
+    <div heading-colum-1r>
+      <h1 big-heading>Login</h1>
+    </div>
+  <!--<app-logo></app-logo>
+  <h1>Sign IN</h1>-->
+  
+  <form>
+    <ion-list>
+      <ion-item transparent>
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input autocomplete="off" name="username" type="text" [(ngModel)]="postData.username"></ion-input>
+      </ion-item>
+
+      <ion-item transparent>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input autocomplete="off"name="password" type="password" [(ngModel)]="postData.password"></ion-input>
+      </ion-item>
+
+      <ion-item lines='none'>
+        <a routerLink='/signup'>Create account</a>
+      </ion-item>
+
+      <ion-button expand="block" shapke='round' color='success' (click)="loginAction()">Sign In</ion-button>
+
+    </ion-list>
+  </form>
+  </div>
+</ion-content>
