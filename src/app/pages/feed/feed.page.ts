@@ -32,7 +32,7 @@ export class FeedPage implements OnInit {
     if(this.postData.user_id && this.postData.token){
       this.feedService.feedData(this.postData).subscribe((res:any)=>{
         console.log(res.feedData);
-        
+        this.feedService.changeFeedData(res.feedData);
       }, (error: any)=>{
         this.toastService.presentToast('Network issue')
       })
